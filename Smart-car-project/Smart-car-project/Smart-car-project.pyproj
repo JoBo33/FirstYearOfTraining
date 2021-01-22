@@ -1,0 +1,89 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>776308c0-6efb-4748-a72f-03e7681bcba8</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>LaneDetectionCalibration.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Smart-car-project</Name>
+    <RootNamespace>Smart-car-project</RootNamespace>
+    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="car.py" />
+    <Compile Include="car_dir.py" />
+    <Compile Include="finish.py" />
+    <Compile Include="LaneDetectionCalibration.py" />
+    <Compile Include="main.py" />
+    <Compile Include="imgStack.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="motor.py" />
+    <Compile Include="PCA9685.py" />
+    <Compile Include="RasPiTest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="servo_test.py" />
+    <Compile Include="Smart_car_project %281%29.py" />
+    <Compile Include="Smart_car_projectNew.py" />
+    <Compile Include="Smart_car_projectOld.py" />
+    <Compile Include="testCurve.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testPictures.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="trajectory.py" />
+    <Compile Include="video_dir.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\geradeGut.mp4" />
+    <Content Include="Resources\geradeMitSpurhalteassistent.mp4" />
+    <Content Include="Resources\geradeNK1.avi" />
+    <Content Include="Resources\geradeNK2.avi" />
+    <Content Include="Resources\geradeSpurHaltenabenSChlecht.mp4" />
+    <Content Include="Resources\geradeSpurHaltenAberbesser.mp4" />
+    <Content Include="Resources\geradeWWK1.mp4" />
+    <Content Include="Resources\kurveLinksNK1.avi" />
+    <Content Include="Resources\kurveLinksWWK1.mp4" />
+    <Content Include="Resources\kurveRechtsNK.avi" />
+    <Content Include="Resources\kurveRechtsWWK1.mp4" />
+    <Content Include="Resources\kurveRechtsWWK2.mp4" />
+    <Content Include="Resources\testPictures1.jpg" />
+    <Content Include="Resources\testPictures2.0.jpg" />
+    <Content Include="Resources\testPictures2.3.jpg" />
+    <Content Include="Resources\testPictures2.4.jpg" />
+    <Content Include="Resources\testPictures2.5.jpg" />
+    <Content Include="Resources\testPictures39.jpg" />
+    <Content Include="Resources\testPictures55.jpg" />
+    <Content Include="Resources\testPictures61.jpg" />
+    <Content Include="Resources\testPictures8.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

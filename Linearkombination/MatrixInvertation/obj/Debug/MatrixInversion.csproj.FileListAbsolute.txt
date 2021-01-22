@@ -1,0 +1,14 @@
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\bin\Debug\MatrixInvertation.exe.config
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\bin\Debug\MatrixInvertation.exe
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\bin\Debug\MatrixInvertation.pdb
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\bin\Debug\MatrizenRechnung.exe
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\bin\Debug\MatrizenRechnung.pdb
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\bin\Debug\MatrizenRechnung.exe.config
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInversion.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInvertation.Form1.resources
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInvertation.Properties.Resources.resources
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInversion.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInversion.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInversion.csproj.CopyComplete
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInvertation.exe
+C:\Users\jb83292\source\repos\Linearkombination\MatrixInvertation\obj\Debug\MatrixInvertation.pdb

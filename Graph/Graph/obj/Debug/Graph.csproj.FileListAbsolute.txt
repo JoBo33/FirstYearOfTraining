@@ -1,0 +1,10 @@
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.csprojAssemblyReference.cache
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.Form1.resources
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.Properties.Resources.resources
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.csproj.GenerateResource.cache
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.csproj.CoreCompileInputs.cache
+c:\users\jb83292\source\repos\Graph\Graph\bin\Debug\Graph.exe.config
+c:\users\jb83292\source\repos\Graph\Graph\bin\Debug\Graph.exe
+c:\users\jb83292\source\repos\Graph\Graph\bin\Debug\Graph.pdb
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.exe
+c:\users\jb83292\source\repos\Graph\Graph\obj\Debug\Graph.pdb

@@ -1,0 +1,6 @@
+C:\Users\jb83292\source\repos\JuliusAufgaben\JuliusAufgaben\bin\Debug\JuliusAufgaben.exe.config
+C:\Users\jb83292\source\repos\JuliusAufgaben\JuliusAufgaben\bin\Debug\JuliusAufgaben.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\JuliusAufgaben\bin\Debug\JuliusAufgaben.pdb
+C:\Users\jb83292\source\repos\JuliusAufgaben\JuliusAufgaben\obj\Debug\Aufgabe1.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\JuliusAufgaben\JuliusAufgaben\obj\Debug\JuliusAufgaben.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\JuliusAufgaben\obj\Debug\JuliusAufgaben.pdb

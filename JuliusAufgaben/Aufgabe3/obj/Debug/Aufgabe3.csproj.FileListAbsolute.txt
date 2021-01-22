@@ -1,0 +1,7 @@
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\obj\Debug\Aufgabe3.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\obj\Debug\Aufgabe3.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\bin\Debug\Aufgabe3.exe.config
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\bin\Debug\Aufgabe3.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\bin\Debug\Aufgabe3.pdb
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\obj\Debug\Aufgabe3.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\Aufgabe3\obj\Debug\Aufgabe3.pdb

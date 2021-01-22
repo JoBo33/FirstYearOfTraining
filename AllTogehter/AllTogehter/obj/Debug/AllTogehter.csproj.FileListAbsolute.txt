@@ -1,0 +1,10 @@
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\bin\Debug\AllTogehter.exe.config
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\bin\Debug\AllTogehter.exe
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\bin\Debug\AllTogehter.pdb
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.Form1.resources
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.Properties.Resources.resources
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.exe
+C:\Users\jb83292\source\repos\AllTogehter\AllTogehter\obj\Debug\AllTogehter.pdb

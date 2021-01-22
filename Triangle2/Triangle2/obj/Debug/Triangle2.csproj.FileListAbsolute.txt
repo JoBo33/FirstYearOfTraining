@@ -1,0 +1,7 @@
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\bin\Debug\Triangle2.exe.config
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\bin\Debug\Triangle2.exe
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\bin\Debug\Triangle2.pdb
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\obj\Debug\Triangle2.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\obj\Debug\Triangle2.exe
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\obj\Debug\Triangle2.pdb
+C:\Users\jb83292\source\repos\Triangle2\Triangle2\obj\Debug\Triangle2.csprojAssemblyReference.cache

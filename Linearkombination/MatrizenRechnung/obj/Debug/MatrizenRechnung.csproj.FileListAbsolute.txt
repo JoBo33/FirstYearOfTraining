@@ -1,0 +1,10 @@
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\bin\Debug\MatrizenRechnung.exe.config
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\bin\Debug\MatrizenRechnung.exe
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\bin\Debug\MatrizenRechnung.pdb
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.Form1.resources
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.Properties.Resources.resources
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.exe
+C:\Users\jb83292\source\repos\Linearkombination\MatrizenRechnung\obj\Debug\MatrizenRechnung.pdb

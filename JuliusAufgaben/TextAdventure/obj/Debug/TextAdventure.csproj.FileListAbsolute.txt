@@ -1,0 +1,7 @@
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\bin\Debug\TextAdventure.exe.config
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\bin\Debug\TextAdventure.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\bin\Debug\TextAdventure.pdb
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\obj\Debug\TextAdventure.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\obj\Debug\TextAdventure.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\obj\Debug\TextAdventure.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\TextAdventure\obj\Debug\TextAdventure.pdb

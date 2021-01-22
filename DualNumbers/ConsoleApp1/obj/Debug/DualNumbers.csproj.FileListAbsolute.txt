@@ -1,0 +1,7 @@
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\obj\Debug\DualNumbers.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\obj\Debug\DualNumbers.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\jb83292\source\repos\DualNumbers\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

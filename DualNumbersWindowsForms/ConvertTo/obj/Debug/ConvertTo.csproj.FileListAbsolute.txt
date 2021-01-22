@@ -1,0 +1,10 @@
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\bin\Debug\ConvertTo.exe.config
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\bin\Debug\ConvertTo.exe
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\bin\Debug\ConvertTo.pdb
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.Form1.resources
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.Properties.Resources.resources
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.exe
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\ConvertTo\obj\Debug\ConvertTo.pdb

@@ -1,0 +1,10 @@
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.Properties.Resources.resources
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\bin\Debug\DualNumbersWindowsForms.exe.config
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\bin\Debug\DualNumbersWindowsForms.exe
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\bin\Debug\DualNumbersWindowsForms.pdb
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.DualzahlenRechner.resources
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.exe
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.pdb
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWindowsForms\obj\Debug\DualNumbersWindowsForms.csprojAssemblyReference.cache

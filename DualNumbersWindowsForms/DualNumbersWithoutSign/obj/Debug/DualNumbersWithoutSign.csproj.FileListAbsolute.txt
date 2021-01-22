@@ -1,0 +1,10 @@
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\bin\Debug\DualNumbersWithoutSign.exe.config
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\bin\Debug\DualNumbersWithoutSign.exe
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\bin\Debug\DualNumbersWithoutSign.pdb
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.Form1.resources
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.Properties.Resources.resources
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.exe
+C:\Users\jb83292\source\repos\DualNumbersWindowsForms\DualNumbersWithoutSign\obj\Debug\DualNumbersWithoutSign.pdb

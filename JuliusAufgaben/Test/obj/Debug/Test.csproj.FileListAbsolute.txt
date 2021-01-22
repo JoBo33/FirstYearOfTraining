@@ -1,0 +1,7 @@
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\bin\Debug\Test.exe.config
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\bin\Debug\Test.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\bin\Debug\Test.pdb
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\obj\Debug\Test.exe
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\obj\Debug\Test.pdb
+C:\Users\jb83292\source\repos\JuliusAufgaben\Test\obj\Debug\Test.csprojAssemblyReference.cache

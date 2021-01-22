@@ -1,0 +1,10 @@
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\bin\Debug\Linearkombination.exe.config
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\bin\Debug\Linearkombination.exe
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\bin\Debug\Linearkombination.pdb
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.Form1.resources
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.Properties.Resources.resources
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.csproj.GenerateResource.cache
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.exe
+C:\Users\jb83292\source\repos\Linearkombination\Linearkombination\obj\Debug\Linearkombination.pdb
