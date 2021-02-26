@@ -7,9 +7,9 @@ def Map(x, in_min, in_max, out_min, out_max):
 
 def setup(busnum=None):
 	global leftPWM, rightPWM, homePWM, pwm
-	leftPWM = 360  #340
-	homePWM = 410  #410
-	rightPWM = 460 #480
+	leftPWM = 310
+	homePWM = 400
+	rightPWM = 470
 	offset =0
 	#try:
 	#	for line in open('config'):
@@ -35,7 +35,7 @@ def turn_left():
 	pwm.write(0, 0, leftPWM)  # CH0
 
 def turn_left_small(angle):
-    direction =  homePWM - angle*3.03
+    direction =  homePWM + (angle* ((leftPWM - homePWM)/30)*-1)  
     pwm.write(0, 0, direction)
 # ==========================================================================================
 # Make the car turn right.
@@ -45,7 +45,7 @@ def turn_right():
 	pwm.write(0, 0, rightPWM)
 
 def turn_right_small(angle):
-    direction =  homePWM - angle*2.38
+    direction =  homePWM + angle*((rightPWM - homePWM)/30) 
     pwm.write(0, 0, direction)
 # ==========================================================================================
 # Make the car turn back.

@@ -1,7 +1,0 @@
-c:\users\jb83292\source\repos\Month\Month\bin\Debug\Month.exe.config
-c:\users\jb83292\source\repos\Month\Month\bin\Debug\Month.exe
-c:\users\jb83292\source\repos\Month\Month\bin\Debug\Month.pdb
-c:\users\jb83292\source\repos\Month\Month\obj\Debug\Month.csprojAssemblyReference.cache
-c:\users\jb83292\source\repos\Month\Month\obj\Debug\Month.csproj.CoreCompileInputs.cache
-c:\users\jb83292\source\repos\Month\Month\obj\Debug\Month.exe
-c:\users\jb83292\source\repos\Month\Month\obj\Debug\Month.pdb

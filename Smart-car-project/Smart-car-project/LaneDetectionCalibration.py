@@ -4,7 +4,8 @@ import numpy as np
 
 #cap = cv2.VideoCapture("Resources/geradeWWK1.mp4")
 #cap = cv2.VideoCapture("Resources/kurveLinksWWK1.mp4")
-cap = cv2.VideoCapture("Resources/geradeGut.mp4")
+cap = cv2.VideoCapture("Resources/gerade_andersrum.mp4")
+#cap = cv2.VideoCapture("Resources/geradeGut.mp4")
 #cap = cv2.VideoCapture("Resources/geradeMitSpurhalteassistent.mp4")
 #cap = cv2.VideoCapture("Resources/geradeSpurHaltenabenSChlecht.mp4")
 #cap = cv2.VideoCapture("Resources/geradeSpurHaltenAberbesser.mp4")
@@ -15,6 +16,12 @@ def empty(a):
 #(0, 105, 0, 98, 158, 255) gutes vid 
 #(0, 106, 0, 58, 149, 255) gutes Vid
 #(95, 105, 26, 78, 93, 182) beim schlechten vid
+
+
+# (0, 179, 0, 45, 205, 255) gerade andersrum gut
+
+
+
 #erster Versuch
 #Hue Min 17
 #Hue Max 76

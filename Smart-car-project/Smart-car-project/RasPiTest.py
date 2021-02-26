@@ -15,15 +15,12 @@ camera.framerate = 32
 rawCapture = PiRGBArray(camera, size=(1920, 1088))
 
  
-
 # allow the camera to warmup
 time.sleep(0.1)
 
 
-
 #motor.setup()
 #car.init(50)
-
 
 
 def getContours(img):

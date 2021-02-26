@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>776308c0-6efb-4748-a72f-03e7681bcba8</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LaneDetectionCalibration.py</StartupFile>
+    <StartupFile>Smart_car_project.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,11 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="car.py" />
     <Compile Include="car_dir.py" />
-    <Compile Include="finish.py" />
     <Compile Include="LaneDetectionCalibration.py" />
-    <Compile Include="main.py" />
     <Compile Include="imgStack.py">
       <SubType>Code</SubType>
     </Compile>
@@ -35,9 +32,7 @@
     <Compile Include="RasPiTest.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="servo_test.py" />
-    <Compile Include="Smart_car_project %281%29.py" />
-    <Compile Include="Smart_car_projectNew.py" />
+    <Compile Include="Smart_car_project.py" />
     <Compile Include="Smart_car_projectOld.py" />
     <Compile Include="testCurve.py">
       <SubType>Code</SubType>
@@ -45,7 +40,6 @@
     <Compile Include="testPictures.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="trajectory.py" />
     <Compile Include="video_dir.py" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +56,9 @@
     <Content Include="Resources\geradeSpurHaltenabenSChlecht.mp4" />
     <Content Include="Resources\geradeSpurHaltenAberbesser.mp4" />
     <Content Include="Resources\geradeWWK1.mp4" />
+    <Content Include="Resources\gerade_andersrum.mp4" />
+    <Content Include="Resources\gerade_threshhold1_ende_kann_besser_sein.mp4" />
+    <Content Include="Resources\gerade_threshhold2.mp4" />
     <Content Include="Resources\kurveLinksNK1.avi" />
     <Content Include="Resources\kurveLinksWWK1.mp4" />
     <Content Include="Resources\kurveRechtsNK.avi" />
