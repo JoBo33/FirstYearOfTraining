@@ -1,24 +1,23 @@
-﻿using System;
+﻿using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using OxyPlot;
-using OxyPlot.Series;
-using OxyPlot.Axes;
 
 namespace AllTogether
 {
     public partial class Form1 : Form
     {
+
+        WorkWithOxyPlot oxyPlot = new WorkWithOxyPlot();
+
         public Form1()
         {
             InitializeComponent();
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -38,6 +37,7 @@ namespace AllTogether
             labelRangeFuncOxyPlot.Text = "Enter the range in which \nthe graph should be drawn \n(min/max on xAxis)";    //Part of: Draw Function with OxyPlot
             numericUpDownRangeMin.Increment = 0.1M;                                                           //Part of: Draw Function with OxyPlot
             numericUpDownRangeMax.Increment = 0.1M;                                                           //Part of: Draw Function with OxyPlot
+            WorkWithOxyPlot.MakePlotmodel(plotViewGraphTheory);
         }
 
         #region Matrix
@@ -47,7 +47,7 @@ namespace AllTogether
             {
                 e.Cancel = true;
             }
-        } 
+        }
         private void ColumnRowNameForInvert(DataGridView dataGridView)
         {
             for (int i = 0; i < dataGridView.ColumnCount; i++)
@@ -83,24 +83,24 @@ namespace AllTogether
         }
         private void dataGridViewLGS_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex < dataGridViewLGS.RowCount-1)
+            if (e.RowIndex < dataGridViewLGS.RowCount - 1)
             {
                 dataGridViewLGS.Rows.RemoveAt(e.RowIndex);
             }
-        } 
+        }
         private void dataGridViewLGS_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (dataGridViewMatrixC1.ColumnCount > 1)
             {
                 dataGridViewLGS.Columns.RemoveAt(e.ColumnIndex);
             }
-        } 
+        }
         public bool RightInputTest()
         {
             bool inputCorrect = true;
             Matrix matrix = new Matrix(dataGridViewLGS.RowCount - 1, dataGridViewLGS.ColumnCount);
             dataGridViewEndLGS.ColumnCount = dataGridViewLGS.ColumnCount;
-            if (dataGridViewLGS.RowCount < 2) return false; 
+            if (dataGridViewLGS.RowCount < 2) return false;
             dataGridViewEndLGS.RowCount = dataGridViewLGS.RowCount - 1;
             if (dataGridViewEndLGS.ColumnCount - 1 != dataGridViewEndLGS.RowCount)
             {
@@ -114,7 +114,7 @@ namespace AllTogether
 
         private void buttonInvert_Click(object sender, EventArgs e)
         {
-           
+
             dataGridViewEndLGS.Refresh();
             Matrix.DeleteEmptyColumns(dataGridViewLGS);
             if (dataGridViewLGS.ColumnCount != dataGridViewLGS.RowCount - 1)
@@ -151,7 +151,7 @@ namespace AllTogether
             matrix.Gauß();
             matrix.RoundMatrix();
             matrix.MatrixToDataGridView(dataGridViewEndLGS);
-        } 
+        }
         private void buttonNormalizedRowEchelonForm_Click(object sender, EventArgs e)
         {
             Matrix.DeleteEmptyColumns(dataGridViewLGS);
@@ -164,7 +164,7 @@ namespace AllTogether
             matrix.ReduzierteDiagonalenform();
             matrix.RoundMatrix();
             matrix.MatrixToDataGridView(dataGridViewEndLGS);
-        } 
+        }
         private void buttonLineareCombination_Click(object sender, EventArgs e)
         {
             Matrix.DeleteEmptyColumns(dataGridViewLGS);
@@ -175,7 +175,7 @@ namespace AllTogether
             Matrix matrix = Matrix.DataGridViewToMatrix(dataGridViewLGS);
             matrix.Gauß();
             matrix.ReduzierteDiagonalenform();
-            if (matrix.LineareKombinationTest(matrix.rowCount, matrix.columnCount-1) && matrix.LineareKombinationTest(matrix.columnCount-1, matrix.rowCount))
+            if (matrix.LineareKombinationTest(matrix.rowCount, matrix.columnCount - 1) && matrix.LineareKombinationTest(matrix.columnCount - 1, matrix.rowCount))
             {
                 textBoxTestErgebnis.Text = "The point can be displayed as a linear combination.";
             }
@@ -185,7 +185,7 @@ namespace AllTogether
             }
             matrix.RoundMatrix();
             matrix.MatrixToDataGridView(dataGridViewEndLGS);
-        } 
+        }
 
 
         public void SizeOfMatrixAnswerWhileMultiplicate(DataGridView dataGridViewMatrixC1, DataGridView dataGridViewMatrixC2)
@@ -268,7 +268,7 @@ namespace AllTogether
             {
                 MessageBox.Show("Calculation not possible. Please check the input.");
             }
-        } 
+        }
         public Matrix SelectedOperatorAndCalculation(Matrix matrix1, Matrix matrix2)
         {
             Matrix matrix3 = new Matrix(matrix1.rowCount, matrix2.columnCount);
@@ -286,7 +286,7 @@ namespace AllTogether
                 matrix3 = matrix1 * matrix2;
             }
             return matrix3;
-        }  
+        }
 
         #endregion Matrix
 
@@ -294,7 +294,7 @@ namespace AllTogether
         #region NumberSystems
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;            
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private void buttonConvert_Click(object sender, EventArgs e)
         {
@@ -334,7 +334,7 @@ namespace AllTogether
             if (radioButtonDecimal.Checked)
             {
                 textBoxSum.Text = NumberSystems.DecimalAdditionSubtraction(summand1, summand2, chosenOperator);
-                
+
             }
             else if (radioButtonBinary.Checked)
             {
@@ -473,7 +473,7 @@ namespace AllTogether
                     }
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Empty cells found.");
             }
@@ -573,7 +573,7 @@ namespace AllTogether
             float stepsize = 0.1f;
             PointF[] pointFs = new PointF[(int)Math.Ceiling((max - min) * 10) + 1];
             int count = 0;
-            for (float x = min; x < max+stepsize; x += stepsize)
+            for (float x = min; x < max + stepsize; x += stepsize)
             {
                 pointFs[count] = new PointF(x, GivenFunction((float)Math.Round(x, 1)));
                 count++;
@@ -602,9 +602,9 @@ namespace AllTogether
             if (expression.ElementAt(0) == '-' && expression.ElementAt(1) == 'x')
             {
                 firstElementMinus = "-";
-                expression = expression.Remove(0,1);
+                expression = expression.Remove(0, 1);
             }
-            string function = expression.Replace("x", x.ToString()); 
+            string function = expression.Replace("x", x.ToString());
             float y = (float)StringToFunction.Eval(function, firstElementMinus);
             if (y >= float.MaxValue)
             {
@@ -714,7 +714,7 @@ namespace AllTogether
 
         private void buttonFuncWithOxy_Click(object sender, EventArgs e)
         {
-            if(numericUpDownRangeMin.Value >= numericUpDownRangeMax.Value)
+            if (numericUpDownRangeMin.Value >= numericUpDownRangeMax.Value)
             {
                 MessageBox.Show("Not a possible range");
                 return;
@@ -760,7 +760,7 @@ namespace AllTogether
             }
         }
 
-        private void PlotGraph(FunctionSeries fs,  OxyPlot.WindowsForms.PlotView plotView, float xMin, float xMax, float yMin, float yMax, FunctionSeries fs2 = null)
+        private void PlotGraph(FunctionSeries fs, OxyPlot.WindowsForms.PlotView plotView, float xMin, float xMax, float yMin, float yMax, FunctionSeries fs2 = null)
         {
             LinearAxis Xaxis = new LinearAxis { Position = AxisPosition.Bottom, Minimum = xMin, Maximum = xMax };
             LinearAxis Yaxis = new LinearAxis { Position = AxisPosition.Left, Minimum = yMin, Maximum = yMax };
@@ -914,7 +914,7 @@ namespace AllTogether
             FunctionSeries fs = new FunctionSeries();
             float x;
             float y;
-            for(float t = 0; t<=1; t+= 0.01f)
+            for (float t = 0; t <= 1; t += 0.01f)
             {
                 x = ((float)numericUpDownBezierX1.Value - 2 * (float)numericUpDownBezierX2.Value + (float)numericUpDownBezierX3.Value) * (float)Math.Pow(t, 2) +
                     (-2 * (float)numericUpDownBezierX1.Value + 2 * (float)numericUpDownBezierX2.Value) * t + (float)numericUpDownBezierX1.Value;
@@ -978,13 +978,13 @@ namespace AllTogether
             {
                 coefficient = 1;
             }
-            else if(i == 1)
+            else if (i == 1)
             {
                 coefficient = n;
             }
             else
             {
-                coefficient += Faculty(n) / (Faculty(i) * Faculty(n-i));
+                coefficient += Faculty(n) / (Faculty(i) * Faculty(n - i));
             }
             return coefficient;
         }
@@ -999,5 +999,175 @@ namespace AllTogether
 
 
         #endregion Bezier curves
+
+        #region Sorting algorithm
+
+        private void buttonBubbleSort_Click(object sender, EventArgs e)
+        {
+            DisableAndEnableSortButtons();
+            double[] sortingArray = GenerateRandomArray();
+            double[] sorted = SortingAlgorithm.BubbleSort(sortingArray, plotViewSortingAlgorithm);
+            DisableAndEnableSortButtons();
+        }
+
+        private void buttonInsertionSort_Click(object sender, EventArgs e)
+        {
+            DisableAndEnableSortButtons();
+            double[] sortingArray = GenerateRandomArray();
+            double[] sorted = SortingAlgorithm.InsertionSort(sortingArray, plotViewSortingAlgorithm);
+            DisableAndEnableSortButtons();
+        }
+
+        private void buttonSelectionSort_Click(object sender, EventArgs e)
+        {
+            DisableAndEnableSortButtons();
+            double[] sortingArray = GenerateRandomArray();
+            double[] sorted = SortingAlgorithm.SelectionSort(sortingArray, plotViewSortingAlgorithm);
+            DisableAndEnableSortButtons();
+        }
+
+        private void buttonQuicksort_Click(object sender, EventArgs e)
+        {
+            DisableAndEnableSortButtons();
+            double[] sortingArray = GenerateRandomArray();
+            double[] sorted = SortingAlgorithm.QuickSortInPlace(sortingArray, 0, sortingArray.Length - 1, plotViewSortingAlgorithm);
+            DisableAndEnableSortButtons();
+        }
+
+        private void buttonMergeSort_Click(object sender, EventArgs e)
+        {
+            DisableAndEnableSortButtons();
+            double[] sortingArray = GenerateRandomArray();
+            double[] sorted = SortingAlgorithm.MergeSort(sortingArray, plotViewSortingAlgorithm);
+            DisableAndEnableSortButtons();
+        }
+
+        private void buttonMergeSortInPlace_Click(object sender, EventArgs e)
+        {
+            DisableAndEnableSortButtons();
+            double[] sortingArray = GenerateRandomArray();
+            SortingAlgorithm.MergeSortInPlace(sortingArray, 0, sortingArray.Length - 1, plotViewSortingAlgorithm);
+            DisableAndEnableSortButtons();
+        }
+
+        private double[] GenerateRandomArray()
+        {
+            Random rnd = new Random();
+            double[] sortingArray = new double[(int)numericUpDownNumberCount.Value];
+            for (int i = 0; i < sortingArray.Length; i++)
+            {
+                sortingArray[i] = rnd.NextDouble() * ((double)numericUpDownMaxValue.Value - (double)numericUpDownMinValue.Value) + (double)numericUpDownMinValue.Value;
+
+            }
+            WorkWithOxyPlot.PlotColumnSeries(ref plotViewSortingAlgorithm, sortingArray);
+            return sortingArray;
+        }
+
+        private void DisableAndEnableSortButtons()
+        {
+            if (buttonBubbleSort.Enabled == false || buttonInsertionSort.Enabled == false || buttonSelectionSort.Enabled == false
+                || buttonQuicksort.Enabled == false || buttonMergeSort.Enabled == false || buttonMergeSortInPlace.Enabled == false)
+            {
+                buttonBubbleSort.Enabled = true;
+                buttonInsertionSort.Enabled = true;
+                buttonSelectionSort.Enabled = true;
+                buttonQuicksort.Enabled = true;
+                buttonMergeSort.Enabled = true;
+                buttonMergeSortInPlace.Enabled = true;
+            }
+            else
+            {
+                buttonBubbleSort.Enabled = false;
+                buttonInsertionSort.Enabled = false;
+                buttonSelectionSort.Enabled = false;
+                buttonQuicksort.Enabled = false;
+                buttonMergeSort.Enabled = false;
+                buttonMergeSortInPlace.Enabled = false;
+            }
+        }
+        #endregion Sorting algotithm
+
+        private void buttonGraphTheory_Click(object sender, EventArgs e)
+        {
+            switch (comboBoxGraphTheory.SelectedItem)
+            {
+                case "Boruvka":
+                    GraphTheory.Boruvka();
+                    break;
+                case "Kruskal":
+                    GraphTheory.Kruskal();
+                    break;
+                case "Dijkstra":
+                    GraphTheory.Dijkstra();
+                    break;
+                case "Floyd-Warshall":
+                    GraphTheory.FloydWarshall(dataGridViewGraphTheoryPoints.RowCount);
+                    break;
+                default:
+                    MessageBox.Show("You have to choose an algorithm!");
+                    break;
+            }
+            
+        }
+
+        private void plotViewGraphTheory_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                FunctionSeries series = new FunctionSeries();
+                DataPoint a = new DataPoint(e.X, e.Y);
+                plotViewGraphTheory.Model.Series.Add(series);
+            }
+
+            //plotViewGraphTheory.Model.PlotArea plotArea = 
+        }
+
+        private void dataGridViewGraphTheoryPoints_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            NumberAsInput(dataGridViewGraphTheoryPoints,e);
+        }
+
+        private void dataGridViewGraphTheoryPoints_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                for (int column = 0; column < dataGridViewGraphTheoryPoints.ColumnCount; column++)
+                {
+                    if (dataGridViewGraphTheoryPoints.Columns[column].Selected && dataGridViewGraphTheoryPoints.ColumnCount > 1)
+                    {
+                        dataGridViewGraphTheoryPoints.Columns.Remove(dataGridViewGraphTheoryPoints.Columns[column]);
+                    }
+                }
+                //ColumnRowName(dataGridViewScalarProduct);
+            }
+        }
+
+        private void dataGridViewGraphTheoryPoints_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dataGridViewGraphTheoryDistances.Rows.Add();
+            AdjustRowHeaderVelue();
+            dataGridViewGraphTheoryDistances.Columns.Add(dataGridViewGraphTheoryDistances.Rows[dataGridViewGraphTheoryDistances.Rows.Count - 1].HeaderCell.Value.ToString(), dataGridViewGraphTheoryDistances.Rows[dataGridViewGraphTheoryDistances.Rows.Count - 1].HeaderCell.Value.ToString());
+        }
+
+        private void AdjustRowHeaderVelue()
+        {
+            List<string> alphabet = new List<string> { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N" };
+            for (int i = 0; i < dataGridViewGraphTheoryPoints.RowCount; i++)
+            {
+                dataGridViewGraphTheoryDistances.Rows[i].HeaderCell.Value = alphabet[i];
+                dataGridViewGraphTheoryPoints.Rows[i].HeaderCell.Value = alphabet[i];
+            }
+        }
+
+        private void dataGridViewGraphTheoryDistances_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            NumberAsInput(dataGridViewGraphTheoryDistances, e);
+        }
+
+        private void dataGridViewGraphTheoryPoints_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            dataGridViewGraphTheoryDistances.Rows.RemoveAt(0);
+            AdjustRowHeaderVelue();
+        }
     }
 }
