@@ -81,12 +81,13 @@ namespace CollisionAtSea
                     for (int i = 1; i < line1.Length; i++)
                     {
                         DataPoint[] comparativeLine1 = new DataPoint[2] { line1[i - 1], line1[i] };
-                        double delayedStart1 = DelayCalculation(i, line1, point);  // the delay one boat has when they start at a breakpoint
 
                         for (int j = 1; j < line2.Length; j++)
                         {
+                            double delayedStart1 = DelayCalculation(i, line1, point);  // the delay one boat has when they start at a breakpoint
+                            
                             DataPoint[] comparativeLine2 = new DataPoint[2] { line2[j - 1], line2[j] };
-                            double delayedStart2 = DelayCalculation(j, line2, nextPoint); ;   // the delay one boat has when they start at a breakpoint
+                            double delayedStart2 = DelayCalculation(j, line2, nextPoint);    // the delay one boat has when they start at a breakpoint
 
                             AdjustDelay(ref delayedStart1, ref delayedStart2);
 
@@ -159,7 +160,8 @@ namespace CollisionAtSea
             DataPoint smallestDistance1 = new DataPoint();
             DataPoint smallestDistance2 = new DataPoint();
 
-            smallestDistance = (float)Math.Sqrt(Math.Pow((newPositionB.X - newPositionA.X), 2) + Math.Pow((newPositionB.Y - newPositionA.Y), 2));
+            smallestDistance = (float)Math.Sqrt(Math.Pow(((line2[0].X + stepWidth._stepWidthXB * delayedStart1) - (line1[0].X + stepWidth._stepWidthXA * delayedStart2)), 2) + 
+                Math.Pow(((line2[0].Y + stepWidth._stepWidthYB * delayedStart1) - (line1[0].Y + stepWidth._stepWidthYA * delayedStart2)), 2));
             if (smallestDistance < (float)numericUpDownMinDistance.Value)
             {
                 FunctionSeries fs = new FunctionSeries()
@@ -191,7 +193,7 @@ namespace CollisionAtSea
                     distancePossible = true;
                 }
 
-                if (CheckPrintCondition(pen, ref smallestDistance, point, nextPoint, ref smallestDistance1, ref smallestDistance2, newPositionA, newPositionB, newDeltaX, newDeltaY, distancePossible) && distancePossible)
+                if (CheckPrintCondition(pen, ref smallestDistance, point, nextPoint, ref smallestDistance1, ref smallestDistance2, newPositionA, newPositionB, newDeltaX, newDeltaY, distancePossible, line1, line2) && distancePossible)
                 {
                     break;
                 }
@@ -225,7 +227,7 @@ namespace CollisionAtSea
             newDeltaY = Math.Round(Math.Abs(newYA - newYB), 4);
         }
 
-        private bool CheckPrintCondition(Pen pen, ref float smallestDistance, int point, int nextPoint, ref DataPoint smallestDistance1, ref DataPoint smallestDistance2, DataPoint newPositionA, DataPoint newPositionB, double newDeltaX, double newDeltaY, bool distancePossible)
+        private bool CheckPrintCondition(Pen pen, ref float smallestDistance, int point, int nextPoint, ref DataPoint smallestDistance1, ref DataPoint smallestDistance2, DataPoint newPositionA, DataPoint newPositionB, double newDeltaX, double newDeltaY, bool distancePossible, DataPoint[] line1, DataPoint[] line2)
         {
             double currentDistance = Math.Round((float)Math.Sqrt(Math.Pow(newDeltaX, 2) + Math.Pow(newDeltaY, 2)),4);
             bool newSmallestDistanceFound = false;
@@ -242,8 +244,16 @@ namespace CollisionAtSea
             {
                 Color = OxyColor.FromArgb(100, 255, 0, 0),
             };
-            fs.Points.Add(smallestDistance1);
-            fs.Points.Add(smallestDistance2);
+            if (smallestDistance1.X != 0 && smallestDistance1.Y != 0 && smallestDistance2.X != 0 && smallestDistance2.Y != 0)
+            {
+                fs.Points.Add(smallestDistance1);
+                fs.Points.Add(smallestDistance2);
+            }
+            else
+            {
+                fs.Points.Add(newPositionA);
+                fs.Points.Add(newPositionB);
+            }
 
             if (newSmallestDistanceFound)
             {
@@ -257,11 +267,22 @@ namespace CollisionAtSea
             }
             else
             {
-                if (distancePossible)
+                if ((line1[0].X < newPositionA.X && line1[1].X < newPositionA.X) || (line1[0].X > newPositionA.X && line1[1].X > newPositionA.X) || (line1[0].Y < newPositionA.Y && line1[1].Y < newPositionA.Y) || (line1[0].Y > newPositionA.Y && line1[1].Y > newPositionA.Y))
+                {
+                    //richTextBox.Text += ("Boat: " + point + " Boat: " + nextPoint + " No collision! They do not cut each other between start and finish.\n");
+                    return true;
+                }
+                else if ((line2[0].X < newPositionB.X && line2[1].X < newPositionB.X) || (line2[0].X > newPositionB.X && line2[1].X > newPositionB.X) || (line2[0].Y < newPositionB.Y && line2[1].Y < newPositionB.Y) || (line2[0].Y > newPositionB.Y && line2[1].Y > newPositionB.Y))
+                {
+                    //richTextBox.Text += ("Boat: " + point + " Boat: " + nextPoint + " No collision! They do not cut each other between start and finish.\n");
+                    return true;
+                }
+                else if (distancePossible)
                 {
                     plotViewCollision.Model.Series.Add(fs);
                     richTextBoxShowCollisionResults.Text += ("Boat: " + point + ", Boat: " + nextPoint + " No collision! " + "smallest distance is: " + smallestDistance + "\n");
                 }
+
                 return true;
             }
         }

@@ -59,10 +59,10 @@ namespace CollisionAtSea
             Pen pen = new Pen(Color.Blue, 0);
             double x = (e.X - 69) * ((Xaxis.ActualMaximum - Xaxis.ActualMinimum) / (695.0 - 69)); 
             double y = (452 - e.Y) * ((Yaxis.ActualMaximum - Xaxis.ActualMinimum) / (452.0 - 18));
-
+            
             _pointOnPolyLine = new DataPoint(x, y);
             _polyline.Add(_pointOnPolyLine);
-
+            
             if (lineC._lineCount == 1)
             {
                 richTextBox.Text += String.Format("Start: X={0}, Y={1},\n", x, y);
@@ -71,6 +71,14 @@ namespace CollisionAtSea
             {
                 richTextBox.Text += String.Format("Breakpoint: X={0}, Y={1},\n", _polyline[_polyline.Count - 2].X, _polyline[_polyline.Count - 2].Y);
             }
+            //lineC._lineCount += e.Clicks;
+            //if (lineC._lineCount <= 1) {
+            //    _pointOnPolyLine = new DataPoint(3863, 8308);
+            //    _polyline.Add(_pointOnPolyLine);
+            //    _pointOnPolyLine = new DataPoint(9882, 5659);
+            //    _polyline.Add(_pointOnPolyLine);
+            //
+            //}
         }
         public void EndOfPolyline(RichTextBox richTextBox, DataGridView dataGridView, PlotView plotView)
         {

@@ -74,6 +74,17 @@ namespace CollisionAtSea
                 _stepWidthXB *= -1;
                 _stepWidthYB *= -1;
             }
+            // was ist wenn z.b. line1[0].X == line1[1].X
+            if (line1[0].X == line1[1].X) 
+            {
+                //if (line1[0].Y < line1[1].Y)
+                    _stepWidthYA *= -1;
+            }
+            if (line2[0].X == line2[1].X)
+            {
+                //if (line2[0].Y < line2[1].Y)
+                    _stepWidthYB *= -1;
+            }
         }
     }
 }
