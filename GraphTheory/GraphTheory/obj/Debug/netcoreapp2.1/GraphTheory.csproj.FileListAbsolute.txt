@@ -1,0 +1,11 @@
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\bin\Debug\netcoreapp2.1\GraphTheory.deps.json
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\bin\Debug\netcoreapp2.1\GraphTheory.runtimeconfig.json
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\bin\Debug\netcoreapp2.1\GraphTheory.runtimeconfig.dev.json
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\bin\Debug\netcoreapp2.1\GraphTheory.dll
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\bin\Debug\netcoreapp2.1\GraphTheory.pdb
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\obj\Debug\netcoreapp2.1\GraphTheory.csprojAssemblyReference.cache
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\obj\Debug\netcoreapp2.1\GraphTheory.csproj.CoreCompileInputs.cache
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\obj\Debug\netcoreapp2.1\GraphTheory.AssemblyInfoInputs.cache
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\obj\Debug\netcoreapp2.1\GraphTheory.AssemblyInfo.cs
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\obj\Debug\netcoreapp2.1\GraphTheory.dll
+C:\Users\jb83292\source\repos\FirstYearOfTraining\GraphTheory\GraphTheory\obj\Debug\netcoreapp2.1\GraphTheory.pdb
