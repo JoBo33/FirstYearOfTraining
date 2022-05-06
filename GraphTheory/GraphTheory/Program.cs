@@ -37,7 +37,7 @@ namespace GraphTheory
 
             FloydWarshall(distanceFloyd);
 
-            // generate tuple with all edges in form of Tuple<knot, knot, weight of edge>
+            // generate tuple with all edges in form of Tuple<node, node, weight of edge>
             Tuple<string, string, int>[] distanceKruskal = new Tuple<string, string, int>[15]
             {
                 Tuple.Create("A","B",1 ),
@@ -120,7 +120,7 @@ namespace GraphTheory
                 for (int j = 0; j < distance.GetLength(1); j++)
                 {
 
-                    // choose iterative every knot
+                    // choose iterative every node
                     for (int k = 0; k < distance.GetLength(1); k++)
                     {
 
@@ -128,7 +128,7 @@ namespace GraphTheory
                         if (distance[i, k] + distance[k, j] > 0)
                         {
 
-                            // check if the way with the specific knot is shorter than without the knot
+                            // check if the way with the specific node is shorter than without the node
                             if (distance[i, j] > distance[i, k] + distance[k, j])
                             {
                                 distance[i, j] = distance[i, k] + distance[k, j];
@@ -141,7 +141,7 @@ namespace GraphTheory
 
         public static void Kruskal(Tuple<string,string,int>[] distance)
         {
-            // maxIterations should be number of knots - 1 but here it is the number of edges
+            // maxIterations should be number of nodes - 1 but here it is the number of edges
             int maxIterations = distance.GetLength(0);
 
             //initialise a list for the minimal spanning tree
@@ -166,7 +166,7 @@ namespace GraphTheory
                 //check if the smallest edge builds a circle
                 bool buildingCircle = false;
 
-                //checks if both knots already in the spanning tree
+                //checks if both nodes already in the spanning tree
                 // proplem: it can be a conntectoredge
                 for (int i = 0; i < spanningTree.Count; i++)
                 {

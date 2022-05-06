@@ -1089,25 +1089,81 @@ namespace AllTogether
 
         private void buttonGraphTheory_Click(object sender, EventArgs e)
         {
+            // ToDo: first index have to be rowcount
+            float[,] distances = new float[dataGridViewGraphTheoryDistances.ColumnCount,dataGridViewGraphTheoryDistances.ColumnCount];
+                                                                 //actually rowCount
+            for (int i = 0; i < dataGridViewGraphTheoryDistances.ColumnCount; i++)
+            {
+                for (int j = 0; j < dataGridViewGraphTheoryDistances.ColumnCount; j++)
+                {
+                    if (i == j)
+                    {
+                        distances[i, j] = 0;
+                    }
+                    else if(dataGridViewGraphTheoryDistances[j,i].Value == null) //.ToString() == string.Empty)
+                    {
+                        distances[i, j] = float.MaxValue;
+                    }
+                    else
+                    {
+                        distances[i, j] = Convert.ToSingle(dataGridViewGraphTheoryDistances[j, i].Value);
+                    }
+                }
+            }
+
+            float[,] result = new float[distances.GetLength(0), distances.GetLength(1)];
+            List<Tuple<float, int, int>> sortedDistances = new List<Tuple<float, int, int>> { };
             switch (comboBoxGraphTheory.SelectedItem)
             {
                 case "Boruvka":
-                    GraphTheory.Boruvka();
+                    sortedDistances = DistancesInSortedList(distances);
+                    result = GraphTheory.Boruvka(distances, sortedDistances);
                     break;
                 case "Kruskal":
-                    GraphTheory.Kruskal();
+                    sortedDistances = DistancesInSortedList(distances);
+                    result = GraphTheory.Kruskal(sortedDistances ,distances.GetLength(0));
                     break;
                 case "Dijkstra":
-                    GraphTheory.Dijkstra();
+                    GraphTheory.Dijkstra(distances);
                     break;
                 case "Floyd-Warshall":
-                    GraphTheory.FloydWarshall(dataGridViewGraphTheoryPoints.RowCount);
+                    result = GraphTheory.FloydWarshall(distances);
                     break;
                 default:
                     MessageBox.Show("You have to choose an algorithm!");
                     break;
             }
-            
+            FillEndGrid(result);
+        }
+
+        private List<Tuple<float, int, int>> DistancesInSortedList(float[,] distances)
+        {
+            List<Tuple<float, int, int>> sortedDistances = new List<Tuple<float, int, int>> { };
+            for (int i = 0; i < distances.GetLength(0); i++)
+            {
+                for (int j = i; j < distances.GetLength(1); j++)
+                {
+                    if (distances[i,j] != 0 && distances[i,j] != float.MaxValue)
+                    {
+                        sortedDistances.Add(Tuple.Create(distances[i, j], i, j));
+                    }
+                }
+            }
+            sortedDistances.Sort();
+            return sortedDistances;
+        }
+
+        private void FillEndGrid(float[,] result)
+        {
+            dataGridViewGraphTheoryEndmatrix.RowCount = result.GetLength(0);
+            dataGridViewGraphTheoryEndmatrix.ColumnCount = result.GetLength(1);
+            for (int i = 0; i < result.GetLength(0); i++)
+            {
+                for (int j = 0; j < result.GetLength(1); j++)
+                {
+                    dataGridViewGraphTheoryEndmatrix[j, i].Value = result[i, j];
+                }
+            }
         }
 
         private void plotViewGraphTheory_MouseDown(object sender, MouseEventArgs e)
@@ -1127,35 +1183,25 @@ namespace AllTogether
             NumberAsInput(dataGridViewGraphTheoryPoints,e);
         }
 
-        private void dataGridViewGraphTheoryPoints_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                for (int column = 0; column < dataGridViewGraphTheoryPoints.ColumnCount; column++)
-                {
-                    if (dataGridViewGraphTheoryPoints.Columns[column].Selected && dataGridViewGraphTheoryPoints.ColumnCount > 1)
-                    {
-                        dataGridViewGraphTheoryPoints.Columns.Remove(dataGridViewGraphTheoryPoints.Columns[column]);
-                    }
-                }
-                //ColumnRowName(dataGridViewScalarProduct);
-            }
-        }
 
         private void dataGridViewGraphTheoryPoints_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             dataGridViewGraphTheoryDistances.Rows.Add();
-            AdjustRowHeaderVelue();
+            AdjustRowAndColumnHeaderValue();
             dataGridViewGraphTheoryDistances.Columns.Add(dataGridViewGraphTheoryDistances.Rows[dataGridViewGraphTheoryDistances.Rows.Count - 1].HeaderCell.Value.ToString(), dataGridViewGraphTheoryDistances.Rows[dataGridViewGraphTheoryDistances.Rows.Count - 1].HeaderCell.Value.ToString());
         }
 
-        private void AdjustRowHeaderVelue()
+        private void AdjustRowAndColumnHeaderValue()
         {
             List<string> alphabet = new List<string> { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N" };
             for (int i = 0; i < dataGridViewGraphTheoryPoints.RowCount; i++)
             {
                 dataGridViewGraphTheoryDistances.Rows[i].HeaderCell.Value = alphabet[i];
                 dataGridViewGraphTheoryPoints.Rows[i].HeaderCell.Value = alphabet[i];
+            }
+            for (int i = 0; i < dataGridViewGraphTheoryDistances.ColumnCount; i++)
+            {
+                dataGridViewGraphTheoryDistances.Columns[i].HeaderText = alphabet[i];
             }
         }
 
@@ -1167,7 +1213,8 @@ namespace AllTogether
         private void dataGridViewGraphTheoryPoints_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             dataGridViewGraphTheoryDistances.Rows.RemoveAt(0);
-            AdjustRowHeaderVelue();
+            dataGridViewGraphTheoryDistances.Columns.RemoveAt(0);
+            AdjustRowAndColumnHeaderValue();
         }
     }
 }
